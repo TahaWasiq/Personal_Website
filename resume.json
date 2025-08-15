@@ -1,0 +1,225 @@
+{
+  "personal": {
+    "name": "Taha Wasiq",
+    "title": "Software Engineer",
+    "roles": ["Software Engineer", "Startup Founder"],
+    "location": "Dallas, TX",
+    "email": "taha.wasiq.1@gmail.com",
+    "phone": "469-343-7291",
+    "website": "https://tahawasiq.com",
+    "github": "https://github.com/TahaWasiq",
+    "linkedin": "https://linkedin.com/in/tahawasiq",
+    "bio": "I'm a Computer Science Master's student at UIUC and a 2x AI Engineer Intern at IBM, building agentic AI workflows and backend tools that drive real business impact. I've also co-founded a SaaS platform for NDA negotiations, to deliver full-stack solutions across industries."
+  },
+  "experience": [
+    {
+      "id": "ibm-ai-engineer-2025",
+      "title": "AI Engineer Intern",
+      "company": "IBM",
+      "location": "San Francisco, CA",
+      "duration": "May 2025 – Present",
+      "description": [
+        "Wrote 3 backend tools using Python and exposed FastAPI endpoints that implemented OCR, page orientation detection, and text blur detection using OpenCV libraries with <5% margin error",
+        "Implemented each tool into an agentic AI workflow to automate Quality control for Wells Fargo’s loan application process and successfully reduce Loan Analyst review time by 80%",
+        "Built and deployed a GPU-accelerated live speech-to-text endpoint on CodeEngine using IBM’s 8B-parameter Speech model",
+        "Integrated the speech-to-text endpoint into an agentic AI workflow with parallel processing for summarization, sentiment analysis, and recommended actions—reducing support delivery time by 50%",
+        "Built an Agentic RAG system using Langflow and AstraDB, vectorizing 100+ 10-K filings; containerized with Docker, deployed to IBM CodeEngine, and integrated as a custom tool in Watsonx Orchestrate",
+        "Led a technical team of interns to develop a Full-Stack internal marketplace application, which led to buy-in from C-Suite Executives"
+      ],
+      "technologies": ["Python", "FastAPI", "OpenCV", "IBM CodeEngine", "Docker", "Langflow", "AstraDB", "Watsonx", "React"],
+      "logo": "/logos/IBM_Logo.jpg"
+    },
+    {
+      "id": "nda-analyst-cofounder",
+      "title": "Full-stack Developer & Co-Founder",
+      "company": "NDA Analyst",
+      "location": "San Francisco, CA",
+      "duration": "January 2025 – Present",
+      "description": [
+        "Creating a software to streamline the NDA contract negotiation process with a FastAPI Python backend that currently has 3k+ lines of code, and a React JavaScript Frontend with 5 pages currently deployed",
+        "Integrated Supabase (PostgreSQL + storage), Google Firebase Auth, GitHub, Vercel, and Render into a seamless CI/CD workflow, automating database migrations and deployments across those 5 platforms to reduce deployment time by 40%",
+        "Implementing document editing features including redline tracking, version control, and automated email notifications"
+      ],
+      "technologies": ["Python", "FastAPI", "React", "JavaScript", "Supabase", "PostgreSQL", "Firebase Auth", "Vercel", "Render", "CI/CD"],
+      "logo": "/logos/NDA_Analyst_Logo.png"
+    },
+    {
+      "id": "ibm-ai-engineer-2024",
+      "title": "AI Engineer Intern",
+      "company": "IBM",
+      "location": "San Francisco, CA",
+      "duration": "May 2024 – Aug 2024",
+      "description": [
+        "Performed data cleaning, model tuning, and prompt engineering in Python Notebooks and compared outputs from 9 Watsonx.ai large language models in a RAG use case for Honda vehicle design",
+        "Utilized IBM prompt lab to generate 20 examples of input and output data in Python Dictionary format to be used for RAG metric testing in developing a watsonx.gov dashboard for PepsiCo’s Gen AI models"
+      ],
+      "technologies": ["Python", "Watsonx.ai", "RAG", "Jupyter Notebooks", "Prompt Engineering", "LLMs"],
+      "logo": "/logos/IBM_Logo.jpg"
+    },
+    {
+      "id": "ibm-technical-sales",
+      "title": "Technical Sales Engineer Intern",
+      "company": "IBM",
+      "location": "Coppell, TX",
+      "duration": "May 2023 – Aug 2023",
+      "description": [
+        "Researched the applications of AI and ML in IBM’s broad range of 7+ cybersecurity products",
+        "Developed 7 innovative use cases, using my knowledge of AI & ML, that I presented to IBM Cybersecurity sales managers"
+      ],
+      "technologies": ["AI/ML", "Cybersecurity", "IBM Products", "Technical Sales"],
+      "logo": "/logos/IBM_Logo.jpg"
+    },
+    {
+      "id": "tws-shoe-company",
+      "title": "Founder/Operator",
+      "company": "TWS Shoe Company",
+      "location": "Murphy, TX",
+      "duration": "January 2022 – May 2023",
+      "description": [
+        "Operated my own shoe re-selling business and brought $20k in revenue",
+        "Programmed a software in C# that used a web-driver to acquire inventory from the Footlocker website"
+      ],
+      "technologies": ["C#", "Web Scraping", "E-commerce", "Business Operations"],
+      "logo": "/logos/TWS_Logo.jpg"
+    },
+    {
+      "id": "peek-consulting",
+      "title": "Account Manager",
+      "company": "Peek Consulting Group",
+      "location": "Dallas, TX",
+      "duration": "April 2021 – August 2021",
+      "description": [
+        "Generated recurring yearly sales revenue of approximately $71,000 on behalf of AT&T",
+        "Negotiated benefits of AT&T services to over 2,000 businesses and corporations through cold calling"
+      ],
+      "technologies": ["Sales", "Account Management", "AT&T Services", "Business Development"],
+      "logo": "/logos/Peek_Logo.jpeg"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Computer Science",
+      "school": "The University of Illinois Urbana Champaign",
+      "location": "Urbana, IL",
+      "duration": "August 2024 – December 2025",
+      "description": [
+        "Focus in Artificial Intelligence",
+        "Coursework: Applied Machine Learning, Deep Learning for Healthcare, Natural Language Processing, Computational Photography, Software Engineering, Practical Statistical Learning"],
+      "logo": "/logos/UIUC_Logo.png"
+    },
+    {
+      "degree": "B.S. Information Technology and Systems: Minor in Computer Science",
+      "school": "The University of Texas at Dallas",
+      "location": "Dallas, TX",
+      "duration": "August 2019 – May 2024",
+      "description": ["Honors/Scholarships: Academic Excellence Scholar, JSOM Freshman Excellence Scholar"],
+      "logo": "/logos/UTD_Logo.jpg"
+    },
+    {
+      "degree": "PG Certification Program in Artificial Intelligence and Machine Learning: Business Applications",
+      "school": "The University of Texas at Austin",
+      "location": "Austin, TX",
+      "duration": "January 2022 – August 2022",
+      "description": [
+        "Application of Statistics, Data Science, and Machine Learning techniques through Python programming",
+        "Completed 9 projects based on real-world business applications"
+      ],
+      "logo": "/logos/UT_Logo.png"
+    }
+  ],
+"projects": [
+  {
+    "id": "computational-photography",
+    "title": "Computational Photography Projects",
+    "description": "Advanced computer vision projects implementing texture synthesis, gradient domain processing, and HDR reconstruction using Python and OpenCV.",
+    "technologies": ["Python", "NumPy", "OpenCV", "SciPy", "Blender"],
+    "github": "https://github.com/TahaWasiq/Image-Quilting-And-Texture-Synthesis",
+    "liveUrl": null,
+    "features": [
+      "Implemented texture synthesis pipeline via dynamic programming-based image quilting, generating realistic imagery, and processing 8+ texture samples across 2,015 lines of implementation code [GitHub](https://github.com/TahaWasiq/Image-Quilting-And-Texture-Synthesis)",
+      "Developed Gradient Domain Processing using Poisson equation solvers and Laplacian pyramids across 1,925 lines of python notebook code for seamless object insertion and blending [GitHub](https://github.com/TahaWasiq/Gradient-Domain-Fusion)",
+      "Built HDR reconstruction and Object rendering system by merging 6+ exposure sequences with equirectangular environment mapping, integrating Blender's Cycles engine for GPU-accelerated ray-traced rendering [GitHub](https://github.com/TahaWasiq/Image-Based-Lighting)"
+    ]
+  },
+  {
+    "id": "weather-app",
+    "title": "Full-Stack Weather Application",
+    "description": "Android weather application with real-time data, Google Maps integration, and LLM-powered insights.",
+    "technologies": ["Java", "Android", "XML", "Google Maps API", "Weather API", "LLM API", "Gradle"],
+    "github": "https://github.com/TahaWasiq/Android-Weather-App",
+    "liveUrl": null,
+    "features": [
+      "Built an Android app in a team of 5 Software Engineers, enabling users to add global locations, view them on Google Maps, fetch real-time weather data via API, and display insights using an LLM API",
+      "Developed 10 backend Java files and 10 frontend XML files; implemented both manual and LLM-generated Gradle testing"
+    ]
+  },
+  {
+    "id": "brain-tumor-classification",
+    "title": "Computer Vision – Brain Tumor Classification",
+    "description": "ML model for brain MRI scan classification using deep learning and computer vision techniques.",
+    "technologies": ["Python", "TensorFlow", "OpenCV", "Deep Learning", "CNN", "VGG16", "Data Augmentation"],
+    "github": "https://github.com/TahaWasiq/Brain-Tumor-MRI-Image-Classifier",
+    "liveUrl": null,
+    "features": [
+      "Constructed an ML model on a dataset of 1000+ images that identifies Brain MRI Scans with or without a tumor",
+      "Utilized Data Augmentation then a 16-layer Convolutional Neural Network with Dropout, Pooling, and other Deep Learning concepts to achieve accuracy of 82%",
+      "Leveraged the open-source VGG16 CNN model, which achieved 95% accuracy on the validation set"
+    ]
+  },
+  {
+    "id": "nlp-airline-sentiment",
+    "title": "NLP – Twitter U.S. Airline Sentiment",
+    "description": "Natural Language Processing model for analyzing airline customer sentiment from Twitter data.",
+    "technologies": ["Python", "NLP", "Tokenization", "Vectorization", "Machine Learning", "Sentiment Analysis"],
+    "github": "https://github.com/TahaWasiq/NLP-Airline-Tweet-Sentiment",
+    "liveUrl": null,
+    "features": [
+      "Applied Python, Tokenization, Vectorization, and other Natural Language Processing techniques to identify positive, neutral, and negative sentiments toward U.S. Airlines based on 15 parameters of over 14,000 customer tweets",
+      "Developed an ML model that helps U.S. Airlines identify customer sentiment and achieved accuracy of 80%"
+    ]
+  }
+],
+  "skills": {
+    "programming": ["Python", "Java", "JavaScript", "TypeScript", "SQL", "HTML", "CSS", "XML", "C#"],
+    "frameworks_tools": [
+      "FastAPI",
+      "React.js",
+      "Git",
+      "Vercel",
+      "Render",
+      "Supabase",
+      "Firebase",
+      "OpenCV",
+      "LangFlow",
+      "LangChain",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "SciPy",
+      "Tableau",
+      "Microsoft Office",
+      "Blender"
+    ],
+    "concepts": [
+      "Machine Learning",
+      "Generative AI",
+      "Data Science",
+      "Backend/Frontend Development",
+      "CI/CD",
+      "Application Development"
+    ]
+  },
+  "languages": [
+    { "language": "English", "proficiency": "Native" },
+    { "language": "Urdu", "proficiency": "Fluent" },
+    { "language": "Hindi", "proficiency": "Fluent" },
+    { "language": "Arabic", "proficiency": "Intermediate" }
+  ],
+  "leadership_and_involvement": [
+    "Rise Relief (Water Charity Non-Profit) – Event Coordinator (May 2023 – Present)",
+    "Racing Dallas FC (Semi-Professional Soccer Club) – Team Member (August 2023 – February 2024)",
+    "Formula Racing Society of Automotive Engineers UTD – Software Team Member (August 2023 – January 2024)",
+    "Afghan Refugee ESL Program – Volunteer ESL Tutor (April 2022 – July 2022)"
+  ],
+  "citizenship": "U.S. Citizen"
+}
