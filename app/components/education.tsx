@@ -6,10 +6,10 @@ export default function Education() {
 
   return (
     <div className="space-y-6">
-      {education.map((educationItem) => (
+      {education.map((educationItem, index) => (
         <TimeLineItem 
-          key={educationItem.id}  // ← Add this key prop
-          id={educationItem.id}
+          key={`${educationItem.school}-${educationItem.degree}-${index}`}
+          id={`education-${index}`}
           title={educationItem.degree}
           organization={educationItem.school}
           location={educationItem.location}

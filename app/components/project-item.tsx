@@ -12,7 +12,7 @@ interface ProjectItemProps {
   technologies: string[];
   features: string[];
   github?: string;
-  liveUrl?: string;
+  liveUrl?: string | null;
 }
 
 export default function ProjectItem({

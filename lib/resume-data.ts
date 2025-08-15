@@ -25,7 +25,6 @@ export interface Experience {
 }
 
 export interface Education {
-  id: string;
   degree: string;
   school: string;
   location: string;
@@ -40,7 +39,7 @@ export interface Project {
   description: string;
   technologies: string[];
   github?: string;
-  liveUrl?: string;
+  liveUrl?: string | null;
   features: string[];
 }
 
@@ -68,9 +67,9 @@ export interface ResumeData {
   education: Education[];
   projects: Project[];
   skills: Skills;
-  certifications: Certification[];
   languages: Language[];
-  interests: string[];
+  leadership_and_involvement: string[];
+  citizenship: string;
 }
 
 export function getResumeData(): ResumeData {
@@ -97,14 +96,14 @@ export function getSkills(): Skills {
   return resumeData.skills as Skills;
 }
 
-export function getCertifications(): Certification[] {
-  return resumeData.certifications as Certification[];
-}
-
 export function getLanguages(): Language[] {
   return resumeData.languages as Language[];
 }
 
-export function getInterests(): string[] {
-  return resumeData.interests as string[];
+export function getLeadershipAndInvolvement(): string[] {
+  return resumeData.leadership_and_involvement as string[];
+}
+
+export function getCitizenship(): string {
+  return resumeData.citizenship as string;
 } 
