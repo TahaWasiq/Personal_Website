@@ -35,13 +35,13 @@ export default function ProjectItem({
     <div className="bg-card border rounded-lg shadow-sm">
       <button
         type="button"
-        className="w-full text-left p-6 flex items-start sm:items-center justify-between gap-4 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className="w-full text-left p-4 sm:p-6 flex items-start sm:items-center justify-between gap-3 sm:gap-4 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((v) => !v)}
       >
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-          <p className="text-muted-foreground mt-2">{description}</p>
+          <h3 className="text-lg sm:text-xl font-semibold text-foreground">{title}</h3>
+          <p className="text-muted-foreground mt-2 text-sm sm:text-base">{description}</p>
         </div>
         <div className="flex gap-2">
           {github && !features.some(feature => feature.includes('[GitHub]')) && (
