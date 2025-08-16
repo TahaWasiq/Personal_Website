@@ -48,7 +48,7 @@ export default function PersonalHeader() {
           <div className="space-y-4 sm:space-y-6 text-center md:text-left">
             {/* Interactive Name */}
             <div className="relative overflow-hidden pb-2">
-              <div className="group relative w-full text-left transition-all duration-500 ease-in-out">
+              <div className="group relative w-full text-center md:text-left transition-all duration-500 ease-in-out">
                 {/* English Name */}
                 <h1 
                   className={cn(
@@ -62,8 +62,8 @@ export default function PersonalHeader() {
                 {/* Arabic Name */}
                 <h1 
                   className={cn(
-                    "absolute top-0 left-0 text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-400 transition-all duration-1000 ease-in-out leading-tight",
-                    showArabic ? "transform translate-y-0 opacity-100" : "transform translate-y-full opacity-0"
+                    "absolute top-0 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-400 transition-all duration-1000 ease-in-out leading-tight",
+                    showArabic ? "transform -translate-x-1/2 md:translate-x-0 translate-y-0 opacity-100" : "transform -translate-x-1/2 md:translate-x-0 translate-y-full opacity-0"
                   )}
                   style={{ direction: 'rtl' }}
                 >
@@ -72,7 +72,7 @@ export default function PersonalHeader() {
                 
                 {/* Hover indicator */}
                 <div className={cn(
-                  "absolute -bottom-2 left-0 w-1/3 h-0.5 bg-emerald-500 transform transition-all duration-300 ease-in-out",
+                  "absolute -bottom-2 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-1/3 h-0.5 bg-emerald-500 transition-all duration-300 ease-in-out",
                   showArabic ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                 )} />
               </div>
