@@ -9,15 +9,15 @@
     "website": "https://tahawasiq.com",
     "github": "https://github.com/TahaWasiq",
     "linkedin": "https://linkedin.com/in/tahawasiq",
-    "bio": "I'm a Computer Science Master's student at UIUC and a 2x AI Engineer Intern at IBM, building agentic AI workflows and backend tools that drive real business impact. I've also co-founded a SaaS platform for NDA negotiations, to deliver full-stack solutions across industries."
+    "bio": "I am a Computer Science Master's student at UIUC and a 2x AI Engineer Intern at IBM, building agentic AI workflows and backend tools that drive real business impact. I've also co-founded a SaaS platform for NDA negotiations, to deliver full-stack solutions across industries."
   },
   "experience": [
     {
       "id": "ibm-ai-engineer-2025",
       "title": "AI Engineer Intern",
       "company": "IBM",
-      "location": "San Francisco, CA",
-      "duration": "May 2025 – Present",
+      "location": "New York, NY",
+      "duration": "May 2025 – August 2025",
       "description": [
         "Wrote 3 backend tools using Python and exposed FastAPI endpoints that implemented OCR, page orientation detection, and text blur detection using OpenCV libraries with <5% margin error",
         "Implemented each tool into an agentic AI workflow to automate Quality control for Wells Fargo’s loan application process and successfully reduce Loan Analyst review time by 80%",

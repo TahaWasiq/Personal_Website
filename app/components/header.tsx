@@ -1,11 +1,26 @@
+'use client'
+
+import { useState, useEffect } from "react"
 import { MapPin } from "lucide-react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { getPersonalInfo } from "@/lib/resume-data"
+import { cn } from "@/lib/utils"
 
 const PROFILE_PIC_SRC = "/Profile_pic.jpeg";
 
 export default function PersonalHeader() {
   const personalInfo = getPersonalInfo();
+  const [showArabic, setShowArabic] = useState(false);
+  
+  // Auto-transition effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowArabic(prev => !prev);
+    }, 3000); // Switch every 3 seconds
+    
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <section className="w-full bg-slate-900 py-12 sm:py-16 px-4 sm:px-6 md:px-12">
       <div className="container mx-auto max-w-4xl">
@@ -24,8 +39,37 @@ export default function PersonalHeader() {
 
           {/* Content */}
           <div className="space-y-4 sm:space-y-6 text-center md:text-left">
-            {/* Name */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">{personalInfo.name}</h1>
+            {/* Interactive Name */}
+            <div className="relative overflow-hidden pb-2">
+              <div className="group relative w-full text-left transition-all duration-500 ease-in-out">
+                {/* English Name */}
+                <h1 
+                  className={cn(
+                    "text-3xl sm:text-4xl md:text-5xl font-bold text-white transition-all duration-1000 ease-in-out leading-tight",
+                    showArabic ? "transform -translate-y-full opacity-0" : "transform translate-y-0 opacity-100"
+                  )}
+                >
+                  {personalInfo.name}
+                </h1>
+                
+                {/* Arabic Name */}
+                <h1 
+                  className={cn(
+                    "absolute top-0 left-0 text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-400 transition-all duration-1000 ease-in-out leading-tight",
+                    showArabic ? "transform translate-y-0 opacity-100" : "transform translate-y-full opacity-0"
+                  )}
+                  style={{ direction: 'rtl' }}
+                >
+                  طه واثق
+                </h1>
+                
+                {/* Hover indicator */}
+                <div className={cn(
+                  "absolute -bottom-2 left-0 w-1/3 h-0.5 bg-emerald-500 transform transition-all duration-300 ease-in-out",
+                  showArabic ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                )} />
+              </div>
+            </div>
 
             {/* Role & Location */}
             <div className="space-y-2 text-slate-300">
