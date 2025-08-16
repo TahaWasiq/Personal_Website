@@ -49,9 +49,9 @@ export default function ProjectItem({
               href={github} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 text-blue-600 hover:text-blue-800 transition-colors"
+              className="p-2 text-blue-600 hover:text-blue-800 transition-colors hover:scale-110"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-5 h-5 transition-transform duration-200" />
             </a>
           )}
           {liveUrl && (
@@ -99,9 +99,9 @@ export default function ProjectItem({
                       href={feature.match(/\[GitHub\]\((https:\/\/github\.com\/[^)]+)\)/)?.[1] || '#'}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 font-black p-2"
+                      className="text-blue-600 hover:text-blue-800 font-black p-2 hover:scale-110"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-5 h-5 transition-transform duration-200" />
                     </a>
                   )}
                 </li>

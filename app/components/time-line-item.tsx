@@ -35,7 +35,7 @@ export default function TimeLineItem({
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className={cn('bg-card border rounded-lg shadow-sm transition-colors')}>
+    <div className={cn('bg-card border rounded-lg shadow-sm transition-colors group')}>
       <button
         type="button"
         className="w-full text-left p-4 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-3 sm:gap-4 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
@@ -46,7 +46,7 @@ export default function TimeLineItem({
         <div className="flex items-center gap-3 sm:gap-4 w-full">
           {/* Logo section - black background for IBM, default for others */}
           <div className={cn(
-            "shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex items-center justify-center",
+            "shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex items-center justify-center transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg",
             organization.toLowerCase().includes('ibm') 
               ? "bg-black" // Black background for IBM
               : "bg-muted" // Default background for others
@@ -54,7 +54,7 @@ export default function TimeLineItem({
             <img 
               src={logo} 
               alt={`${organization} logo`} 
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain" 
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain transition-transform duration-300 ease-in-out group-hover:scale-105" 
             />
           </div>
 

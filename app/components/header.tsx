@@ -1,16 +1,18 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { MapPin } from "lucide-react"
+import { MapPin, Mail, Phone, Github, Linkedin, Sun, Moon } from "lucide-react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { getPersonalInfo } from "@/lib/resume-data"
 import { cn } from "@/lib/utils"
+import { useTheme } from "@/lib/theme-provider"
 
 const PROFILE_PIC_SRC = "/Profile_pic.jpeg";
 
 export default function PersonalHeader() {
   const personalInfo = getPersonalInfo();
   const [showArabic, setShowArabic] = useState(false);
+  const { theme, setTheme } = useTheme();
   
   // Auto-transition effect
   useEffect(() => {
@@ -21,8 +23,13 @@ export default function PersonalHeader() {
     return () => clearInterval(interval);
   }, []);
   
+  // Toggle theme
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+  
   return (
-    <section className="w-full bg-slate-900 py-12 sm:py-16 px-4 sm:px-6 md:px-12">
+    <section className="w-full bg-slate-900 dark:bg-slate-900 py-12 sm:py-16 px-4 sm:px-6 md:px-12" style={{ backgroundColor: theme === 'dark' ? undefined : '#16367a' }}>
       <div className="container mx-auto max-w-4xl">
         <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr] md:gap-12 items-center">
           {/* Profile Image */}
@@ -72,7 +79,7 @@ export default function PersonalHeader() {
             </div>
 
             {/* Role & Location */}
-            <div className="space-y-2 text-slate-300">
+            <div className="space-y-2 text-slate-200">
               {personalInfo.roles.map((role, index) => (
                 <div key={index} className="flex items-center justify-center md:justify-start gap-2">
                   <span className="w-1 h-1 bg-emerald-500 rounded-full"></span>
@@ -90,9 +97,68 @@ export default function PersonalHeader() {
 
         {/* Bio Text */}
         <div className="mt-8 sm:mt-12 max-w-3xl">
-          <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
             {personalInfo.bio}
           </p>
+        </div>
+        
+        {/* Floating Social Footer Tab */}
+        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-3 rounded-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm shadow-lg border border-slate-200/50 dark:border-slate-700/50 transition-all duration-300 ease-in-out hover:bg-slate-100/90 dark:hover:bg-slate-700/90 hover:scale-110"
+            title={theme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            ) : (
+              <Moon className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            )}
+          </button>
+          
+          {/* Contact Icons */}
+          <div className="flex items-center gap-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full p-3 shadow-lg border border-slate-200/50 dark:border-slate-700/50 transition-all duration-300 ease-in-out hover:bg-slate-100/90 dark:hover:bg-slate-700/90">
+            {/* Email */}
+            <a 
+              href={`mailto:${personalInfo.email}`}
+              className="p-2 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 transition-colors duration-200 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 hover:scale-110"
+              title="Email"
+            >
+              <Mail className="w-4 h-4" />
+            </a>
+            
+            {/* Phone */}
+            <a 
+              href={`tel:${personalInfo.phone}`}
+              className="p-2 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 transition-colors duration-200 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 hover:scale-110"
+              title="Phone"
+            >
+              <Phone className="w-4 h-4" />
+            </a>
+            
+            {/* GitHub */}
+            <a 
+              href={personalInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 transition-colors duration-200 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 hover:scale-110"
+              title="GitHub"
+            >
+              <Github className="w-4 h-4" />
+            </a>
+            
+            {/* LinkedIn */}
+            <a 
+              href={personalInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 transition-colors duration-200 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 hover:scale-110"
+              title="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
