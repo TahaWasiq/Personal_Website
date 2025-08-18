@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { MapPin, Mail, Phone, Github, Linkedin, Sun, Moon } from "lucide-react"
+import { MapPin, Mail, Github, Linkedin, Sun, Moon } from "lucide-react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { getPersonalInfo } from "@/lib/resume-data"
 import { cn } from "@/lib/utils"
@@ -128,14 +128,7 @@ export default function PersonalHeader() {
               <Mail className="w-4 h-4" />
             </a>
             
-            {/* Phone */}
-            <a 
-              href={`tel:${personalInfo.phone}`}
-              className="p-2 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 transition-colors duration-200 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 hover:scale-110"
-              title="Phone"
-            >
-              <Phone className="w-4 h-4" />
-            </a>
+
             
             {/* GitHub */}
             <a 

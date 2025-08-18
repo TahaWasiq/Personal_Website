@@ -6,7 +6,6 @@ export interface PersonalInfo {
   roles: string[];
   location: string;
   email: string;
-  phone: string;
   website: string;
   github: string;
   linkedin: string;
