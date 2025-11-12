@@ -2,7 +2,7 @@
 
 This is a personal portfolio website built with [Next.js](https://nextjs.org), TypeScript, and Tailwind CSS. It showcases my experience as a Software Engineer and AI Engineer Intern at IBM.
 
-## Visit tahawasiq.com
+## tahawasiq.com
 
 
 ## Or run locally
